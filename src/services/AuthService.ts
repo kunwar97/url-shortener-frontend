@@ -8,7 +8,7 @@ class AuthService {
   }
 
   setAuthToken = (token: string) => {
-    localStorage.setItem('auth_token', `bearer ${token}`);
+    localStorage.setItem('auth_token', `${token}`);
   };
 
   clearAuthToken(){

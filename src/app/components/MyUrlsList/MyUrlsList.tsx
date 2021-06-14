@@ -77,6 +77,11 @@ const MyUrlsList: React.FC<MyUrlsListProps> = props => {
       key: 'expiry_time',
       width: 180,
       render: (value: any) => {
+
+        if (!value) {
+          return "N/A";
+        }
+
         if (moment().isSameOrAfter(moment(value))) {
           return "Expired"
         } else {
